@@ -286,6 +286,13 @@ footer .selecticon li a:hover {
     .logo {
         width: 60px;
     }
+    .about-hero h1 {
+        font-size: 2em;
+    }
+
+    .about-hero p {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -317,5 +324,11 @@ footer .selecticon li a:hover {
     .logo {
         width: 50px;
     }
-}
+    .about-hero h1 {
+        font-size: 1.5em;
+    }
 
+    .about-hero p {
+        font-size: 0.9em;
+    }
+}

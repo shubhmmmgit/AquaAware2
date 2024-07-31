@@ -199,3 +199,38 @@ button:hover {
 .wrapper:hover .curved {
     clip-path: circle(120% at 0 0);
 }
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .curved {
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .curved {
+        height: 80px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .input-box input {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}

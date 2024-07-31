@@ -341,3 +341,80 @@ input[type="text"]:focus, input[type="number"]:focus ,input[type="month"]{
     margin-top: 10px;
 }
 
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    .donate_text h1 {
+        font-size: 28px;
+    }
+
+    .donate_text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #donation_box {
+        width: 100%;
+    }
+
+    #payment_type, #total_donation_amount {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #payment_type div, #total_donation_amount div {
+        margin: 10px 0;
+    }
+
+    .donate_text h1 {
+        font-size: 24px;
+    }
+
+    .donate_text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .donate_text h1 {
+        font-size: 20px;
+    }
+
+    .donate_text p {
+        font-size: 14px;
+    }
+
+    #payment_type div, #total_donation_amount div {
+        width: 100%;
+        text-align: center;
+    }
+
+    #payment_type, #total_donation_amount {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .donate_text h1 {
+        font-size: 18px;
+    }
+
+    .donate_text p {
+        font-size: 12px;
+    }
+
+    #payment_type div, #total_donation_amount div {
+        margin: 5px 0;
+    }
+}
