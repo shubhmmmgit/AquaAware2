@@ -1,0 +1,343 @@
+body{
+    margin: 0;
+    font: 400 1rem / 1.5 "ABC Favorit", Tahoma, sans-serif; 
+}
+/* header */
+header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgba(22,72,93,255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+nav a {
+    margin:  10px  20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: ghostwhite;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #f8f8ff8a;
+}
+
+/* main */
+main{
+    padding-top: 60px;
+}
+section{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-around;
+}
+#donation_layout_outer{
+    padding: 80px 40px;
+    width: 100%;
+    height: 100%;
+}
+#donation_layout_inner{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px double white; */
+    overflow: hidden;
+}
+.donate_text{
+    color: white;
+    font-family: inherit;
+    width: 50%;
+    font-size: 100%;
+}
+h1{
+    font-family: Impact;
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+.donate_text p{
+    font-size: 2rem;
+    margin-top: 0;
+}
+#donation_box{
+    height: auto;
+    width:  400px;
+    border: 2px solid rgba(223,222,227,255);
+    border-radius: 8px;
+    background-color: rgba(255,253,250,255);
+}
+#amount input,
+#payment_type input
+{
+    display: none;
+}
+label{
+    display: flex;
+    justify-content: center;
+}
+#payment_type{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 15px;
+}
+#payment_type label{
+    border: 2px solid rgba(223,222,227,255);
+    padding: 2px 10px;
+    height: auto;
+    width: 125px;
+    border-radius: 8px;
+    color: rgba(42,68,61,255);
+    font-size: 1.2rem;
+    font-weight:200;
+    display: flex;
+    justify-content: center;
+}
+#onetime:checked + label,
+#monthly:checked + label
+{
+    background-color: rgba(233,234,231,255);
+    color: rgba(42,68,61,255);
+    border: 2px solid rgba(42,68,61,255); 
+    font-weight: 600;
+}
+#amount{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 40px;
+}
+#amount label{
+    border: 2px solid rgba(223,222,227,255);
+    border-radius: 8px;
+    height: auto;
+    width: 100px;
+    padding: 2px 10px;
+    margin: 5px;
+    color: rgba(42,68,61,255);
+    font-size: 1rem;
+    font-weight:200;
+}
+#twenty_five:checked + label,
+#fifty:checked + label,
+#hundred:checked + label,
+#five_hundred:checked + label,
+#thousand:checked + label,
+#two_thousand:checked + label{
+    background-color: rgba(233,234,231,255);
+    color: rgba(42,68,61,255);
+    border: 2px solid rgba(42,68,61,255); 
+    font-weight: 600;
+}
+#total_amount_custom{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: baseline;
+    border: 2px solid rgba(42,68,61,255);
+    border-radius: 8px;
+}
+#total_amount_custom_outer{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+#total_amount_custom input{
+    border: none;
+    background-color: transparent;
+    outline: none; 
+    line-height: 60px;
+    font-size: larger;
+    font-weight: 500;
+    color: rgba(42,68,61,255);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#donate_button{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px;
+    height: 50px;
+    width: 100%;
+}
+#button_donate{
+    border: none;
+    border-radius: 8px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 30px;
+    padding: 5px 15px;
+    width: 200px;
+}
+/* Images */
+/* header */
+#logo{
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+}
+/* main */
+#background{
+    width:100%; 
+    height: 100%; 
+    object-fit: cover;
+    position: absolute;
+}
+#payment-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="text"],input[type="number"],input[type="date"],input[type="month"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus ,input[type="month"]{
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn-submit {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background: #0056b3;
+}
+/* Test */
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* test */
+/* Add the following CSS to your existing CSS */
+
+/* How Your Donation Helps Section */
+#how_your_donation_helps {
+    padding: 40px;
+    background-color: rgba(49,87,99,255);
+    text-align: center;
+    /* test */ 
+    flex-direction: column;
+}
+
+#how_your_donation_helps h2 {
+    font-family: Impact;
+    font-weight: 100;
+    font-size: 6rem;
+    margin-bottom: 20px;
+    color: ghostwhite;
+}
+
+.help-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.help-card {
+    background-color: white;
+    border: 1px solid rgba(223, 222, 227, 255);
+    border-radius: 10px;
+    width: 40%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.help-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.help-card h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.help-card p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+

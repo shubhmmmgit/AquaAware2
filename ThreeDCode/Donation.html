@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width"/>
+    <title>Donation</title>
+    <link rel="stylesheet" href="Donation.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Logo site.png" alt="logo" id="logo">
+                <a href="/AquaAware2/ThreeDCode/index.html">Home</a>
+                <a href="/AquaAware2/ThreeDCode/waterquality.html">Water Quality</a>
+                <a href="/AquaAware2/ThreeDCode/volunteer.html">Volunteer</a>
+                <a href="/AquaAware2/ThreeDCode/community.html">Community</a>
+                <a href="/AquaAware2/ThreeDCode/login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="Donationimg.webp" alt="img" id="background">
+            <div id="donation_layout_outer">
+                <div id="donation_layout_inner">
+                    <div class="donate_text">    
+                        <h1>DONATE NOW</h1>
+                        <p>Join the Flow for Cleaner Rivers</p> 
+                    </div>
+                    <div id="donation_box"">
+                        <form action="server">
+                            <div id="payment_type">
+                                <div> 
+                                    <input type="radio" id="onetime" name="payment_type" value="Onetime" checked>
+                                    <label for="onetime"><span>One Time</span></label>
+                                </div>
+                                <div >
+                                    <input type="radio" id="monthly" name="payment_type" value="Monthly">
+                                    <label for="monthly"><span style="color: cornflowerblue;">&hearts; </span><span>Monthly</span></label>
+                                </div>
+                            </div>
+                            <div id="total_donation_amount">
+                                <div id="amount">
+                                    <div>
+                                        <input type="radio" name="amtr" class="donation_amount" value="25" id="twenty_five" onclick="updateValue(this)">
+                                        <label for="twenty_five"><span>&#8377;25</span></label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="amtr" class="donation_amount" value="50" id="fifty" onclick="updateValue(this)">
+                                        <label for="fifty"><span>&#8377;50</span></label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="amtr" class="donation_amount" value="100" id="hundred" onclick="updateValue(this)">
+                                        <label for="hundred"><span>&#8377;100</span></label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="amtr" class="donation_amount" value="500" id="five_hundred" onclick="updateValue(this)">
+                                        <label for="five_hundred"><span>&#8377;500</span></label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="amtr" class="donation_amount" value="1000" id="thousand" onclick="updateValue(this)">
+                                        <label for="thousand"><span>&#8377;1000</span></label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="amtr" class="donation_amount" value="2000" id="two_thousand" onclick="updateValue(this)">
+                                        <label for="two_thousand"><span>&#8377;2000</span> </label>
+                                    </div>
+                                </div>
+                                <div id="total_amount_custom_outer">
+                                    <div id="total_amount_custom">
+                                        <span style="font-size: 25px;">&#8377;</span>
+                                        <input type="number" inputmode="numeric" id="Custom_amount" size="24" name="amt" placeholder="1500">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                            <div id="donate_button">
+                                <button id="button_donate">Donate <span style="color: white;">&hearts;</span></button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="Donation.js"></script>
+        <div id="paymentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Credit/Debit Card Payment</h2>
+                <form id="payment-form" action="/submit-payment" method="post">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="number" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Cardholder Name</label>
+                        <input type="text" id="cardName" name="cardName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="month" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="number" id="cvv" name="cvv" placeholder="123" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Pay Now</button>
+                </form>
+            </div>
+        </div>
+        <!-- test  -->
+        <section id="how_your_donation_helps">
+            <h2 id="heading_2">How Your Donations Help</h2>
+            <div class="help-cards">
+                <div class="help-card">
+                    <img src="Clean water project.jpg" alt="Help Image 1">
+                    <h3>Clean Water Projects</h3>
+                    <p>Your donation funds clean water projects in communities.</p>
+                </div>
+                <div class="help-card">
+                    <img src="Sanitation facilities.avif" alt="Help Image 2">
+                    <h3>Sanitation Facilities</h3>
+                    <p>We build sanitation facilities to improve hygiene and health.</p>
+                </div>
+                <div class="help-card">
+                    <img src="Education program.jpg" alt="Help Image 3">
+                    <h3>Education Programs</h3>
+                    <p>Donations support educational programs about water conservation.</p>
+                </div>
+                <div class="help-card">
+                    <img src="Emergency-Relief.png" alt="Help Image 4">
+                    <h3>Emergency Relief</h3>
+                    <p>We provide emergency water supplies during natural disasters.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
