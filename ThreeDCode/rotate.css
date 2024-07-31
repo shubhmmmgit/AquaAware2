@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: #fff; /* Changed background to white */
+    background: #fff;
 }
 
 header {
@@ -24,12 +24,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
+
 .logo {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 100px; /* Adjust size as needed */
+    width: 100px;
     height: auto;
 }
 
@@ -67,13 +69,13 @@ header {
 }
 
 nav {
-    margin : 100px 0px  ;
+    margin: 100px 0;
     position: relative;
     z-index: 2;
 }
 
 nav a {
-    margin:  0  10px;
+    margin: 0 10px;
     text-decoration: none;
     font-size: 1.2em;
     color: #007BFF;
@@ -84,53 +86,11 @@ nav a:hover {
     color: #0056b3;
 }
 
-
-
 main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-}
-footer{
-    position: relative;
-    width: 100;
-    background: #3586ff;
-    min-height: 100px;
-    min-width: 1302px;
-    padding: 20px, 50px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer .selecticon{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px, 0;
-    flex-wrap: wrap;
-
-}
-footer .selecticon li{
-    list-style: none;
-
-}
-footer .selecticon li a{
-    font-size: 2em;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-}
-footer .selecticon li a:hover{
-    transform: translateY(-10px);
-}
-main {
-    flex: 1;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -160,7 +120,7 @@ main {
 .news-article {
     background-color: white;
     border-radius: 8px;
-    box-shadow: 5px 5px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 300px;
     width: 100%;
@@ -197,4 +157,112 @@ main {
 
 .news-article a:hover {
     color: #0056b3;
+}
+
+footer {
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .selecticon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .selecticon li {
+    list-style: none;
+}
+
+footer .selecticon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .selecticon li a:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 1200px) {
+    .content h2 {
+        font-size: 6em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    .logo {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 4em;
+    }
+
+    nav {
+        margin: 50px 0;
+    }
+
+    nav a {
+        font-size: 0.9em;
+    }
+
+    #news h3 {
+        font-size: 1.5em;
+    }
+
+    .news-article {
+        max-width: 90%;
+    }
+
+    footer .selecticon li a {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: 2.5em;
+    }
+
+    nav {
+        margin: 30px 0;
+    }
+
+    nav a {
+        font-size: 0.8em;
+        margin: 0 5px;
+    }
+
+    #news h3 {
+        font-size: 1.2em;
+    }
+
+    .news-article {
+        max-width: 100%;
+    }
+
+    footer .selecticon li a {
+        font-size: 1.2em;
+    }
+
+    .logo {
+        width: 50px;
+    }
 }

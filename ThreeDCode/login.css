@@ -193,3 +193,18 @@ button:hover {
 .wrapper:hover .curved {
     clip-path: circle(120% at 0 0);
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+}
